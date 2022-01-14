@@ -19,9 +19,10 @@ function reverseWord(word) {
 let reversedWord1 = reverseWord(userWord)
 console.log(reversedWord1)
 
-// // controllo se la parola inserita e la parola invertita sono uguali
-// if (reversedWord1 == userWord) {
-//     alert('La parola inserita è palindroma')
-// } else {
-//     alert('la parola inserita non è palindroma')
-// }
+// controllo se la parola inserita e la parola invertita sono uguali
+
+if (reversedWord1 == userWord) {
+    alert('La parola inserita è palindroma')
+} else {
+    alert('la parola inserita non è palindroma')
+}
