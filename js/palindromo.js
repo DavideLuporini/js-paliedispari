@@ -3,22 +3,25 @@
 // Creare una funzione per capire se la parola inserita è palindroma
 
 // chiedo all'utente una parola
-let word = prompt('inserisci una parola').trim();
-
+let userWord = prompt('inserisci una parola').trim();
+console.log(userWord)
 
 // scrivo una funzione per capovolgere la parola
 function reverseWord(word) {
-    let reversedword = '';
-    for (let i = word.lenght - 1; i >= 0; i--) {
-        reversedword += word.charAt(i)
+    let reversedWord = '';
+    for (let i = word.length - 1; i >= 0; i--) {
+        reversedWord += word.charAt(i);
     }
-    return reverseWord
-
+    return reversedWord;
 }
 
-// controllo se la parola inserita e la parola invertita sono uguali
-if (reversedWord === word) {
+// recupero la parola inserita dopo averle invertito le lettere
+let reversedWord1 = reverseWord(userWord)
+console.log(reversedWord1)
 
-}
-
-// controllo se la parola inserita e la parola invertita sono uguali
+// // controllo se la parola inserita e la parola invertita sono uguali
+// if (reversedWord1 == userWord) {
+//     alert('La parola inserita è palindroma')
+// } else {
+//     alert('la parola inserita non è palindroma')
+// }
