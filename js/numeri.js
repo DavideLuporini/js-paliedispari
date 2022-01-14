@@ -20,15 +20,5 @@ function numeroCasuale(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-
-
 // faccio la somma
 let sum = number + randomNumber;
-
-
-
-// function parODispari(number) {
-//     if (sum % 2) {
-
-//     } else
-// })
