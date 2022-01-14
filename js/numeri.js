@@ -7,8 +7,28 @@
 
 let pariODispariValue = document.getElementById('number').value;
 let number = document.getElementById('number');
+let randomNumber = numeroCasuale(1, 5);
+
+document.getElementById("generate").addEventListener("click", function() {;
+
+});
 
 
-// function parODispari() {
 
+// funzione numero casuale
+function numeroCasuale(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+
+
+// faccio la somma
+let sum = number + randomNumber;
+
+
+
+// function parODispari(number) {
+//     if (sum % 2) {
+
+//     } else
 // })
