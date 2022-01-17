@@ -27,35 +27,33 @@ document.getElementById("generate").addEventListener("click", function() {;
 
     // IN CASO SIA PARI
     // validation
-    if (userNumber < 1 || userNumber > 6 || isNaN(userNumber)) {
+    if (parseInt(userNumber) < 1 || parseInt(userNumber) > 6 || isNaN(userNumber)) {
 
         alert('non hai inserito un numero valido')
+    } else if (pariODispariValue == 1) {
 
-        if (pariODispariValue == 1) {
-
-            const sum = parseInt(userNumber) + randomNumber;
-            console.log('La somma è: ' + sum);
-            if (sum % 2 == 0) {
-                console.log('HAI VINTO!')
-            } else {
-                console.log('HA VINTO IL COMPUTER');
-            }
-            //   IN CASO SIA DISPARI
-        } else if (pariODispariValue == 2) {
-
-            const sum = parseInt(userNumber) + randomNumber;
-
-
-            console.log('La somma è: ' + sum);
-            if (sum % 2 == 1) {
-                console.log('HAI VINTO!')
-            } else {
-                console.log('HA VINTO IL COMPUTER');
-            }
-            //  IN CASO IL VALORE INSERITO NON SIA CORRETTO
+        const sum = parseInt(userNumber) + randomNumber;
+        console.log('La somma è: ' + sum);
+        if (sum % 2 == 0) {
+            console.log('HAI VINTO!')
         } else {
-            alert('non hai selezionato pari o dispari')
-
+            console.log('HA VINTO IL COMPUTER');
         }
+        //   IN CASO SIA DISPARI
+    } else if (pariODispariValue == 2) {
+
+        const sum = parseInt(userNumber) + randomNumber;
+
+
+        console.log('La somma è: ' + sum);
+        if (sum % 2 !== 0) {
+            console.log('HAI VINTO!')
+        } else {
+            console.log('HA VINTO IL COMPUTER');
+        }
+        //  IN CASO IL VALORE INSERITO NON SIA CORRETTO
+    } else {
+        alert('non hai selezionato pari o dispari')
+
     }
 })
