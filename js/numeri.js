@@ -16,10 +16,6 @@ let randomNumber = numeroCasuale(1, 5);
 function numeroCasuale(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-console.log(randomNumber)
-    // faccio la somma
-    // const sum = userNumber + randomNumber;
-
 
 
 
@@ -27,34 +23,32 @@ console.log(randomNumber)
 document.getElementById("generate").addEventListener("click", function() {;
     let userNumber = document.getElementById('number').value;
     let pariODispariValue = document.getElementById('choise').value;
-    console.log(pariODispariValue)
+    let randomNumber = numeroCasuale(1, 5);
+
+    // IN CASO SIA PARI
     if (pariODispariValue == 1) {
 
-
         const sum = parseInt(userNumber) + randomNumber;
-        console.log(sum)
-        console.log(userNumber)
         console.log('La somma è: ' + sum);
         if (sum % 2 == 0) {
             console.log('HAI VINTO!')
         } else {
             console.log('HA VINTO IL COMPUTER');
         }
+        //   IN CASO SIA DISPARI
     } else if (pariODispariValue == 2) {
 
-
         const sum = parseInt(userNumber) + randomNumber;
-        console.log(sum)
-        console.log(userNumber)
+
+
         console.log('La somma è: ' + sum);
         if (sum % 2 == 1) {
             console.log('HAI VINTO!')
         } else {
             console.log('HA VINTO IL COMPUTER');
         }
+        //  IN CASO IL VALORE INSERITO NON SIA CORRETTO
     } else {
         alert('non hai selezionato pari o dispari')
     }
 })
-
-console.log(userNumber)
