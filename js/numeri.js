@@ -5,13 +5,10 @@
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.
 
-let pariODispariValue = document.getElementById('number').value;
-let number = document.getElementById('number');
+let pariODispari = document.getElementById('choise');
+let pariODispariValue = document.getElementById('choise').value;
+let userNumber = document.getElementById('number');
 let randomNumber = numeroCasuale(1, 5);
-
-document.getElementById("generate").addEventListener("click", function() {;
-
-});
 
 
 
@@ -19,6 +16,45 @@ document.getElementById("generate").addEventListener("click", function() {;
 function numeroCasuale(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+console.log(randomNumber)
+    // faccio la somma
+    // const sum = userNumber + randomNumber;
 
-// faccio la somma
-let sum = number + randomNumber;
+
+
+
+// CICLO PER VEDERE CHI HA VINTO
+document.getElementById("generate").addEventListener("click", function() {;
+    let userNumber = document.getElementById('number').value;
+    let pariODispariValue = document.getElementById('choise').value;
+    console.log(pariODispariValue)
+    if (pariODispariValue == 1) {
+
+
+        const sum = parseInt(userNumber) + randomNumber;
+        console.log(sum)
+        console.log(userNumber)
+        console.log('La somma è: ' + sum);
+        if (sum % 2 == 0) {
+            console.log('HAI VINTO!')
+        } else {
+            console.log('HA VINTO IL COMPUTER');
+        }
+    } else if (pariODispariValue == 2) {
+
+
+        const sum = parseInt(userNumber) + randomNumber;
+        console.log(sum)
+        console.log(userNumber)
+        console.log('La somma è: ' + sum);
+        if (sum % 2 == 1) {
+            console.log('HAI VINTO!')
+        } else {
+            console.log('HA VINTO IL COMPUTER');
+        }
+    } else {
+        alert('non hai selezionato pari o dispari')
+    }
+})
+
+console.log(userNumber)
